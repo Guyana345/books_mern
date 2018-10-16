@@ -2,13 +2,21 @@
 const express = require('express');
 const app = express();
 
+//routes
+const routes = require('./routes');
+
+
+//server port
 const PORT = process.env.PORT || 5000;
+
+//db connection
+require('./models')
 
 // configure body parser for AJAX requests
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-const routes = require('./routes');
+
 
 
 // Bootstrap server

@@ -8,10 +8,8 @@ const PORT = process.env.PORT || 5000;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// routes
-app.get('/', (req, res) => {
-	res.send('Hello from MERN');
-});
+const routes = require('./routes');
+
 
 // Bootstrap server
 app.listen(PORT, () => {
